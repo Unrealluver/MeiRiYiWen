@@ -172,7 +172,7 @@ public class FirstActivity extends AppCompatActivity// implements View.OnClickLi
                         show();
                 break;
             case R.id.setting_item:
-                Intent intent = new Intent(FirstActivity.this,SecondActivity.class);
+                Intent intent = new Intent(FirstActivity.this,ShelfActivity.class);
                 startActivity(intent);
                 break;
             case R.id.quit_item:
