@@ -14,23 +14,28 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Node;
+import org.jsoup.select.Elements;
+
+import java.io.IOException;
 import java.util.List;
 
 public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> {
     private Context mContext;
-    private List<Fruit> mFruitList;
+    private List<Book> mFruitList;
     static class ViewHolder extends RecyclerView.ViewHolder {
         CardView cardView;
-        ImageView fruitImage;
-        TextView fruitName;
+        ImageView bookImage;
+        TextView bookName;
         public ViewHolder(View view) {
             super(view);
             cardView = (CardView) view;
-            fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
-            fruitName = (TextView) view.findViewById(R.id.fruit_name);
+            bookImage = (ImageView) view.findViewById(R.id.book_image);
+            bookName = (TextView) view.findViewById(R.id.book_name);
         }
     }
-    public FruitAdapter(List<Fruit> fruitList) {
+    public FruitAdapter(List<Book> fruitList) {
         mFruitList = fruitList;
     }
     @Override
@@ -44,9 +49,9 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
     }
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Fruit fruit = mFruitList.get(position);
-        holder.fruitName.setText(fruit.getName());
-        Glide.with(mContext).load(fruit.getImageId()).into(holder.fruitImage);
+        Book book = mFruitList.get(position);
+        holder.bookName.setText(book.getName());
+        Glide.with(mContext).load(book.getImageId()).into(holder.bookImage);
     }
     @Override
     public int getItemCount() {

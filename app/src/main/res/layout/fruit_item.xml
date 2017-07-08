@@ -11,16 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/fruit_image"
+            android:id="@+id/book_image"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:scaleType="centerCrop" />
         <TextView
-            android:id="@+id/fruit_name"
+            android:id="@+id/book_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="5dp"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:text="ihihihi"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>

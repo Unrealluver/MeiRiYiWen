@@ -25,7 +25,9 @@
             android:label="设置" />
         <activity android:name=".SettingActivity" />
         <activity android:name=".ShelfActivity" />
-        <activity android:name=".FruitAdapter"></activity>
+        <activity android:name=".FruitAdapter" />
+        <activity android:name=".three_ways_cache" />
+        <activity android:name=".JsoupSolve"></activity>
     </application>
 
 </manifest>

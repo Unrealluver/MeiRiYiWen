@@ -1,14 +1,13 @@
 package com.example.unreallover.activitytest;
 
-import android.util.Log;
-
 /**
-* Created by Unreal Lover on 2017/7/7.
-*/
-public class Fruit {
+ * Created by Unreal Lover on 2017/7/8.
+ */
+
+public class Book {
     private String name;
     private int imageId;
-    public Fruit(String name, int imageId) {
+    public Book(String name, int imageId) {
         this.name = name;
         this.imageId = imageId;
     }
@@ -20,3 +19,4 @@ public class Fruit {
         return imageId;
     }
 }
+//Fruit -> Book
