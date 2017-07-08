@@ -58,8 +58,6 @@ public class ShelfActivity extends AppCompatActivity {
 
 
             new Thread(new Runnable() {
-
-
                         public void run () {
                         try {
                              Book[] books = {
@@ -81,7 +79,7 @@ public class ShelfActivity extends AppCompatActivity {
                             //final String Pic = pic.get(i).select("a").select("img").attr("src");
                             Elements title = doc.select("div.book-name");
                             for (int i = 0; i < 12; i++) {
-                                Book[i]= title.get(i).select("a").attr("title");}
+                                books[i]= title.get(i).select("a").attr("title");}
                             //Url = title.select("a").attr("href");
                             Elements author = doc.select("div.book-author");
                           // String Author = author.get(i).text();
@@ -89,7 +87,6 @@ public class ShelfActivity extends AppCompatActivity {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-
                     }
 
             }).start();
@@ -102,7 +99,7 @@ public class ShelfActivity extends AppCompatActivity {
 
 
 
-    private void initFruits() {
+private void initFruits() {
         Book[] books = {
                 new Book("Apple", R.drawable.q),
                 new Book("Banana", R.drawable.w),
